@@ -1,0 +1,2048 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: 北京市水体抗生素污染空间分布及生态风险评估： 人工智能增效关键数据提取与分析
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/deepseek:0.0.6@dd589dc093c8084925858034ab5ec1fdf0d33819f43226c2f8c4a749a9acbbb2
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/openai:0.0.29@9e17ae8073fe53c282e9dc411e76a3cc52f8e794e4cc2499d204502086871c53
+kind: app
+version: 0.3.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: iteration
+      id: 1750466107735-source-1750466144404-target
+      selected: false
+      source: '1750466107735'
+      sourceHandle: source
+      target: '1750466144404'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1750466144404'
+        sourceType: document-extractor
+        targetType: llm
+      id: 1750466165834--1750466363404-target
+      selected: false
+      source: '1750466165834'
+      sourceHandle: source
+      target: '1750466363404'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1750466144404'
+        sourceType: llm
+        targetType: code
+      id: 1750466363404-source-1750466433066-target
+      selected: false
+      source: '1750466363404'
+      sourceHandle: source
+      target: '1750466433066'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: iteration
+        targetType: template-transform
+      id: 1750466144404-source-1750466469749-target
+      selected: false
+      source: '1750466144404'
+      sourceHandle: source
+      target: '1750466469749'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: end
+      id: 1750466469749-source-1750466481626-target
+      selected: false
+      source: '1750466469749'
+      sourceHandle: source
+      target: '1750466481626'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1750466144404'
+        sourceType: document-extractor
+        targetType: llm
+      id: 1750466165834-source-1751007101693-target
+      selected: false
+      source: '1750466165834'
+      sourceHandle: source
+      target: '1751007101693'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1750466144404'
+        sourceType: llm
+        targetType: code
+      id: 1751007101693-source-1750466433066-target
+      selected: false
+      source: '1751007101693'
+      sourceHandle: source
+      target: '1750466433066'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1750466144404'
+        sourceType: iteration-start
+        targetType: document-extractor
+      id: 1750466144404start-source-1750466165834-target
+      selected: false
+      source: 1750466144404start
+      sourceHandle: source
+      target: '1750466165834'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: iteration
+      id: 1750466107735-source-1751117358810-target
+      selected: false
+      source: '1750466107735'
+      sourceHandle: source
+      target: '1751117358810'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751117358810'
+        sourceType: iteration-start
+        targetType: document-extractor
+      id: 1751117358810start-source-1751117642024-target
+      selected: false
+      source: 1751117358810start
+      sourceHandle: source
+      target: '1751117642024'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: template-transform
+      id: 1751117358810-source-1750466469749-target
+      selected: false
+      source: '1751117358810'
+      sourceHandle: source
+      target: '1750466469749'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751117358810'
+        sourceType: llm
+        targetType: code
+      id: 1751117652660-source-1751121668795-target
+      selected: false
+      source: '1751117652660'
+      sourceHandle: source
+      target: '1751121668795'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751117358810'
+        sourceType: llm
+        targetType: code
+      id: 1751117823361-source-1751121668795-target
+      selected: false
+      source: '1751117823361'
+      sourceHandle: source
+      target: '1751121668795'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751117358810'
+        sourceType: document-extractor
+        targetType: llm
+      id: 1751117642024-source-1751117652660-target
+      selected: false
+      source: '1751117642024'
+      sourceHandle: source
+      target: '1751117652660'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751117358810'
+        sourceType: document-extractor
+        targetType: llm
+      id: 1751117642024-source-1751117823361-target
+      selected: false
+      source: '1751117642024'
+      sourceHandle: source
+      target: '1751117823361'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: iteration
+      id: 1750466107735-source-1751373621053-target
+      selected: false
+      source: '1750466107735'
+      sourceHandle: source
+      target: '1751373621053'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751373621053'
+        sourceType: iteration-start
+        targetType: document-extractor
+      id: 1751373621053start-source-1751373640405-target
+      selected: false
+      source: 1751373621053start
+      sourceHandle: source
+      target: '1751373640405'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751373621053'
+        sourceType: document-extractor
+        targetType: llm
+      id: 1751373640405-source-1751373650354-target
+      selected: false
+      source: '1751373640405'
+      sourceHandle: source
+      target: '1751373650354'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751373621053'
+        sourceType: document-extractor
+        targetType: llm
+      id: 1751373640405-source-1751373851802-target
+      selected: false
+      source: '1751373640405'
+      sourceHandle: source
+      target: '1751373851802'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751373621053'
+        sourceType: llm
+        targetType: code
+      id: 1751373650354-source-1751374441285-target
+      selected: false
+      source: '1751373650354'
+      sourceHandle: source
+      target: '1751374441285'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751373621053'
+        sourceType: llm
+        targetType: code
+      id: 1751373851802-source-1751374441285-target
+      selected: false
+      source: '1751373851802'
+      sourceHandle: source
+      target: '1751374441285'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: template-transform
+      id: 1751373621053-source-1750466469749-target
+      selected: false
+      source: '1751373621053'
+      sourceHandle: source
+      target: '1750466469749'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: iteration
+      id: 1750466107735-source-1751376385930-target
+      selected: false
+      source: '1750466107735'
+      sourceHandle: source
+      target: '1751376385930'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751376385930'
+        sourceType: iteration-start
+        targetType: document-extractor
+      id: 1751376385930start-source-1751378023089-target
+      selected: false
+      source: 1751376385930start
+      sourceHandle: source
+      target: '1751378023089'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751376385930'
+        sourceType: document-extractor
+        targetType: llm
+      id: 1751378023089-source-1751378035165-target
+      selected: false
+      source: '1751378023089'
+      sourceHandle: source
+      target: '1751378035165'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751376385930'
+        sourceType: document-extractor
+        targetType: llm
+      id: 1751378023089-source-1751378038707-target
+      selected: false
+      source: '1751378023089'
+      sourceHandle: source
+      target: '1751378038707'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751376385930'
+        sourceType: llm
+        targetType: code
+      id: 1751378035165-source-1751378358745-target
+      selected: false
+      source: '1751378035165'
+      sourceHandle: source
+      target: '1751378358745'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751376385930'
+        sourceType: llm
+        targetType: code
+      id: 1751378038707-source-1751378358745-target
+      selected: false
+      source: '1751378038707'
+      sourceHandle: source
+      target: '1751378358745'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: template-transform
+      id: 1751376385930-source-1750466469749-target
+      selected: false
+      source: '1751376385930'
+      sourceHandle: source
+      target: '1750466469749'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: 请提交要读取抗生素浓度信息的文件
+        selected: false
+        title: 开始
+        type: start
+        variables:
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          - image
+          allowed_file_upload_methods:
+          - local_file
+          label: object_file
+          max_length: 10
+          options: []
+          required: true
+          type: file-list
+          variable: object_file
+      height: 117
+      id: '1750466107735'
+      position:
+        x: 30
+        y: 427
+      positionAbsolute:
+        x: 30
+        y: 427
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: terminated
+        height: 454
+        is_parallel: true
+        iterator_selector:
+        - '1750466107735'
+        - object_file
+        output_selector:
+        - '1750466433066'
+        - deepseek_chat
+        output_type: array[object]
+        parallel_nums: 10
+        selected: false
+        start_node_id: 1750466144404start
+        title: 迭代
+        type: iteration
+        width: 1116
+      height: 454
+      id: '1750466144404'
+      position:
+        x: 334
+        y: 417.6196808987317
+      positionAbsolute:
+        x: 334
+        y: 417.6196808987317
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 1116
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1750466144404start
+      parentId: '1750466144404'
+      position:
+        x: 60
+        y: 109.5
+      positionAbsolute:
+        x: 394
+        y: 527.1196808987318
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        desc: ''
+        isInIteration: true
+        isInLoop: false
+        is_array_file: true
+        iteration_id: '1750466144404'
+        selected: false
+        title: 文档提取
+        type: document-extractor
+        variable_selector:
+        - '1750466107735'
+        - object_file
+      height: 91
+      id: '1750466165834'
+      parentId: '1750466144404'
+      position:
+        x: 204
+        y: 88
+      positionAbsolute:
+        x: 538
+        y: 505.6196808987317
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1750466165834'
+          - text
+        desc: 话术1
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1750466144404'
+        model:
+          completion_params: {}
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: bf9b5d70-f601-4f4d-9dac-f07ed861ea55
+          role: system
+          text: '阶段1：抗生素与水体类型识别：
+
+            “请从文献{{#1750466165834.text#}}
+
+            中提取以下信息：
+
+            PaperID是{{#1750466144404.index#}}
+
+            ①Name:抗生素名称（如‘氧氟沙星’，需区分异构体，如‘R-氧氟沙星’）；②对应的水体类型Water（如‘河水’‘海水’‘雨水’），若未明确标注‘水体’，需根据上下文推断（如‘湖泊沉积物’不属于水体）。”
+
+            阶段2：浓度与采样信息整合：
+
+            “针对上一步识别的抗生素-水体对，提取：①浓度数值Value（保留科学计数法，如‘3.2×10⁻³ μg/L’，注意标注“浓度范围”“平均值”“中位数”“未检出”等情况）；②采样地点Location（精确到流域/城市，如‘长江三角洲’）；③采样时间Date（精确到年月，如‘2023年5月’）；④若浓度低于检测限（LOD），标注‘<LOD’及数值（如‘<0.5
+            ng/L’）。”
+
+            阶段3：时空数据结构化：
+
+            “将前两步结果生成环境监测数据记录，以JSON数组格式输出要求：①包含‘文献PaperID{{#1750466144404.index#}}-抗生素Name-浓度Value-水体Water-地点Location-时间Date’五要素；②地点需关联流域（如‘太湖梅梁湾’属于‘太湖流域’）；③时间信息缺失时标注‘[时间未知]’。
+
+            '
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              Context:
+                type: string
+              Date:
+                type: string
+              Location:
+                type: string
+              Name:
+                type: string
+              PaperID:
+                type: string
+              Unit:
+                type: string
+              Value:
+                type: number
+              Water:
+                type: string
+            required:
+            - PaperID
+            - Name
+            - Value
+            - Unit
+            - Water
+            - Location
+            - Date
+            - Context
+            type: object
+        structured_output_enabled: true
+        title: deepseek_chat1
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 147
+      id: '1750466363404'
+      parentId: '1750466144404'
+      position:
+        x: 508
+        y: 60
+      positionAbsolute:
+        x: 842
+        y: 477.6196808987317
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: "def main(arg1: object, arg2: object) -> dict:\n    return {\n     \
+          \   \"deepseek_chat\": {\n            \"话术一\": arg1,\n            \"话术二\"\
+          : arg2\n        }\n    }\n"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1750466144404'
+        outputs:
+          deepseek_chat:
+            children: null
+            type: object
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 代码执行
+        type: code
+        variables:
+        - value_selector:
+          - '1750466363404'
+          - structured_output
+          variable: arg1
+        - value_selector:
+          - '1751007101693'
+          - structured_output
+          variable: arg2
+      height: 83
+      id: '1750466433066'
+      parentId: '1750466144404'
+      position:
+        x: 812
+        y: 92
+      positionAbsolute:
+        x: 1146
+        y: 509.6196808987317
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        desc: ''
+        selected: false
+        template: "[\r\n  {% for item in arg1 %}\r\n    {\r\n      \"deepseek_chat\"\
+          : {{ item }},\r\n      \"source\": \"iteration_1\"\r\n    }{% if not loop.last\
+          \ %},{% endif %}\r\n  {% endfor %}\r\n]\r\n[\r\n  {% for item in arg2 %}\r\
+          \n    {\r\n      \"deepseek_coder\": {{ item }},\r\n      \"source\": \"\
+          iteration_2\"\r\n    }{% if not loop.last %},{% endif %}\r\n  {% endfor\
+          \ %}\r\n]\r\n[\r\n  {% for item in arg3 %}\r\n    {\r\n      \"ChatGPT_4o_mini\"\
+          : {{ item }},\r\n      \"source\": \"iteration_3\"\r\n    }{% if not loop.last\
+          \ %},{% endif %}\r\n  {% endfor %}\r\n]\r\n[\r\n  {% for item in arg4 %}\r\
+          \n    {\r\n      \"ChatGPT_41_mini\": {{ item }},\r\n      \"source\": \"\
+          iteration_4\"\r\n    }{% if not loop.last %},{% endif %}\r\n  {% endfor\
+          \ %}\r\n]"
+        title: 模板转换
+        type: template-transform
+        variables:
+        - value_selector:
+          - '1750466144404'
+          - output
+          variable: arg1
+        - value_selector:
+          - '1751117358810'
+          - output
+          variable: arg2
+        - value_selector:
+          - '1751373621053'
+          - output
+          variable: arg3
+        - value_selector:
+          - '1751376385930'
+          - output
+          variable: arg4
+      height: 53
+      id: '1750466469749'
+      position:
+        x: 1518.6612375229165
+        y: 427
+      positionAbsolute:
+        x: 1518.6612375229165
+        y: 427
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1750466469749'
+          - output
+          variable: 抗生素浓度
+        selected: false
+        title: 结束
+        type: end
+      height: 89
+      id: '1750466481626'
+      position:
+        x: 1805.3387624770835
+        y: 427
+      positionAbsolute:
+        x: 1805.3387624770835
+        y: 427
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        author: 2023200551@ruc.edu.cn
+        desc: ''
+        height: 261
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[],"direction":null,"format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"本工作流程围绕科学文献中抗生素浓度数据获取展开，通过调用多种大语言模型，以多样化话术对文献进行询问，经文档抽取、代码执行、模板转换等环节，最终实现数据提取。","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
+          16px;"}}'
+        theme: pink
+        title: ''
+        type: ''
+        width: 249
+      height: 261
+      id: '1750466705947'
+      position:
+        x: -228.66493953613457
+        y: 427
+      positionAbsolute:
+        x: -228.66493953613457
+        y: 427
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 249
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1750466165834'
+          - text
+        desc: 话术2
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1750466144404'
+        model:
+          completion_params: {}
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: e6e46307-9337-4ad8-8ec8-45474802bc6a
+          role: system
+          text: '请从我提供的科学文献{{#1750466165834.text#}}
+
+            中提取所有抗生素及其浓度相关信息，以JSON数组格式输出。要求包含：
+
+            PaperID是{{#1750466144404.index#}}
+
+            ① Name:抗生素名称（如‘磺胺甲恶唑’，保留完整化学名）；
+
+            ② Value and Unit:浓度数值及单位（如‘12.5 ng/L’，环境领域常见单位：ng/L、μg/L、μg/kg（沉积物），注意标注“浓度范围”“平/均值”“中位数”“未检出”等情况）
+
+            ③ Water: 水体类型（如‘地表水’‘饮用水’‘污水处理厂出水’）
+
+            ④ Location & Date: 采样信息（采样地点/河流名称、采样时间，如‘长江南京段，2023年7月’）
+
+            ⑤ Context: 原文上下文（段落编号或句子片段，如‘摘要第3段’‘图 2 caption’）。'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              Context:
+                type: string
+              Date:
+                type: string
+              Location:
+                type: string
+              Name:
+                type: string
+              PaperID:
+                type: string
+              Unit:
+                type: string
+              Value:
+                type: number
+              Water:
+                type: string
+            required:
+            - PaperID
+            - Name
+            - Value
+            - Unit
+            - Water
+            - Location
+            - Date
+            - Context
+            type: object
+        structured_output_enabled: true
+        title: deepseek_chat2
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 147
+      id: '1751007101693'
+      parentId: '1750466144404'
+      position:
+        x: 509.42857142857156
+        y: 247
+      positionAbsolute:
+        x: 843.4285714285716
+        y: 664.6196808987318
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        desc: ''
+        error_handle_mode: terminated
+        height: 454
+        is_parallel: true
+        iterator_selector:
+        - '1750466107735'
+        - object_file
+        output_selector:
+        - '1751121668795'
+        - deepseek_coder
+        output_type: array[object]
+        parallel_nums: 10
+        selected: false
+        start_node_id: 1751117358810start
+        title: 迭代 2
+        type: iteration
+        width: 1116
+      height: 454
+      id: '1751117358810'
+      position:
+        x: 334
+        y: 921
+      positionAbsolute:
+        x: 334
+        y: 921
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 1116
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1751117358810start
+      parentId: '1751117358810'
+      position:
+        x: 60
+        y: 109.5
+      positionAbsolute:
+        x: 394
+        y: 1030.5
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        desc: ''
+        isInIteration: true
+        isInLoop: false
+        is_array_file: true
+        iteration_id: '1751117358810'
+        selected: false
+        title: 文档提取2
+        type: document-extractor
+        variable_selector:
+        - '1750466107735'
+        - object_file
+      height: 91
+      id: '1751117642024'
+      parentId: '1751117358810'
+      position:
+        x: 204
+        y: 88
+      positionAbsolute:
+        x: 538
+        y: 1009
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1751117642024'
+          - text
+        desc: '话术1 '
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751117358810'
+        model:
+          completion_params: {}
+          mode: chat
+          name: deepseek-coder
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: 963865c5-ce94-42a7-b118-2f82b32563ba
+          role: system
+          text: '请从我提供的科学文献{{#1751117642024.text#}}
+
+            中提取所有抗生素及其浓度相关信息，以JSON数组格式输出。要求包含：
+
+            PaperID是{{#1751117358810.index#}}
+
+            ① Name:抗生素名称（如‘磺胺甲恶唑’，保留完整化学名）；
+
+            ② Value and Unit:浓度数值及单位（如‘12.5 ng/L’，环境领域常见单位：ng/L、μg/L、μg/kg（沉积物），注意标注“浓度范围”“平/均值”“中位数”“未检出”等情况）
+
+            ③ Water: 水体类型（如‘地表水’‘饮用水’‘污水处理厂出水’）
+
+            ④ Location & Date: 采样信息（采样地点/河流名称、采样时间，如‘长江南京段，2023年7月’）
+
+            ⑤ Context: 原文上下文（段落编号或句子片段，如‘摘要第3段’‘图 2 caption’）。'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              Context:
+                type: string
+              Date:
+                type: string
+              Location:
+                type: string
+              Name:
+                type: string
+              PaperID:
+                type: string
+              Unit:
+                type: string
+              Value:
+                type: number
+              Water:
+                type: string
+            required:
+            - PaperID
+            - Name
+            - Value
+            - Unit
+            - Water
+            - Location
+            - Date
+            - Context
+            type: object
+        structured_output_enabled: true
+        title: deepseek_coder1
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 147
+      id: '1751117652660'
+      parentId: '1751117358810'
+      position:
+        x: 508
+        y: 60
+      positionAbsolute:
+        x: 842
+        y: 981
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1751117642024'
+          - text
+        desc: 话术2
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751117358810'
+        model:
+          completion_params: {}
+          mode: chat
+          name: deepseek-coder
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: 2587d97a-5f7e-4990-8c6c-3a6dbdb11e0e
+          role: system
+          text: '阶段1：抗生素与水体类型识别：
+
+            请从文献{{#1751117642024.text#}}
+
+            中提取以下信息：
+
+            PaperID是{{#1751117358810.index#}}
+
+            ①Name:抗生素名称（如‘氧氟沙星’，需区分异构体，如‘R-氧氟沙星’）；②对应的水体类型Water（如‘河水’‘海水’‘雨水’），若未明确标注‘水体’，需根据上下文推断（如‘湖泊沉积物’不属于水体）。”
+
+            阶段2：浓度与采样信息整合：
+
+            “针对上一步识别的抗生素-水体对，提取：①浓度数值Value（保留科学计数法，如‘3.2×10⁻³ μg/L’，注意标注“浓度范围”“平均值”“中位数”“未检出”等情况）；②采样地点Location（精确到流域/城市，如‘长江三角洲’）；③采样时间Date（精确到年月，如‘2023年5月’）；④若浓度低于检测限（LOD），标注‘<LOD’及数值（如‘<0.5
+            ng/L’）。”
+
+            阶段3：时空数据结构化：
+
+            “将前两步结果生成环境监测数据记录，以JSON数组格式输出要求：①包含‘文献PaperID{{#1751117358810.index#}}-抗生素Name-浓度Value-水体Water-地点Location-时间Date’五要素；②地点需关联流域（如‘太湖梅梁湾’属于‘太湖流域’）；③时间信息缺失时标注‘[时间未知]’。'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              Context:
+                type: string
+              Date:
+                type: string
+              Location:
+                type: string
+              Name:
+                type: string
+              PaperID:
+                type: string
+              Unit:
+                type: string
+              Value:
+                type: number
+              Water:
+                type: string
+            required:
+            - PaperID
+            - Name
+            - Value
+            - Unit
+            - Water
+            - Location
+            - Date
+            - Context
+            type: object
+        structured_output_enabled: true
+        title: deepseek_coder2
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 147
+      id: '1751117823361'
+      parentId: '1751117358810'
+      position:
+        x: 508
+        y: 247
+      positionAbsolute:
+        x: 842
+        y: 1168
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: "def main(arg1: object, arg2: object) -> dict:\n    return {\n     \
+          \   \"deepseek_coder\": {\n            \"话术一\": arg1,\n            \"话术二\"\
+          : arg2\n        }\n    }\n"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751117358810'
+        outputs:
+          deepseek_coder:
+            children: null
+            type: object
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 代码执行 2
+        type: code
+        variables:
+        - value_selector:
+          - '1751117652660'
+          - structured_output
+          variable: arg1
+        - value_selector:
+          - '1751117823361'
+          - structured_output
+          variable: arg2
+      height: 83
+      id: '1751121668795'
+      parentId: '1751117358810'
+      position:
+        x: 812
+        y: 92
+      positionAbsolute:
+        x: 1146
+        y: 1013
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        author: 2023200551@ruc.edu.cn
+        desc: ''
+        height: 135
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"工作流程将由此开始。系统会提示用户上传含有抗生素浓度的科学文献。","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
+          16px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 249
+      height: 135
+      id: '1751188147944'
+      position:
+        x: 30
+        y: 555.0608683159473
+      positionAbsolute:
+        x: 30
+        y: 555.0608683159473
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 249
+    - data:
+        author: 2023200551@ruc.edu.cn
+        desc: ''
+        height: 335
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"本流程以包含抗生素浓度信息挖掘需求的文件（","type":"text","version":1},{"detail":0,"format":16,"mode":"normal","style":"font-size:
+          16px;","text":"object_file","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"）作为输入，通过双并行迭代模式提升数据处理效率。具体而言：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0},{"children":[],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0},{"children":[{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          16px;","text":"并行执行","type":"text","version":1},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"：同步触发四个独立迭代流程（迭代1、迭代2、迭代3、迭代4）分别采用不同的大语言模型（deepseek_chat,deepseek-coder,ChatGPT-4o-mini,ChatGPT-4.1-mini）进行数据提取；","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"link","version":1,"textStyle":"font-size:
+          16px;","rel":"noreferrer","target":null,"title":null,"url":""}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
+          16px;","value":1},{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          16px;","text":"差异化分析","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"：通过模型多样性覆盖不同文献分析场景（如结构化数据解析、非结构化文本挖掘等）；","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;","value":2},{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          16px;","text":"效率优化","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"：并行架构显著提升数据提取吞吐量，确保快速完成大规模文献处理","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;","value":3}],"direction":"ltr","format":"","indent":0,"type":"list","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;","listType":"bullet","start":1,"tag":"ul"}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 506
+      height: 335
+      id: '1751188379669'
+      position:
+        x: -228.66493953613457
+        y: 710.0253035385781
+      positionAbsolute:
+        x: -228.66493953613457
+        y: 710.0253035385781
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 506
+    - data:
+        author: 2023200551@ruc.edu.cn
+        desc: ''
+        height: 215
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          16px;","text":"文档提取节点","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"：","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;"},{"children":[],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"在每轮迭代中，由此对输入文件开展解析，精准定位、抽取与抗生素浓度相关文本内容，为后续模型分析提供基础素材。迭代1、迭代2、迭代3、迭代4分别代表不同的大语言模型，其内部的两种LLM分别代表同一种大语言模型的两种询问话术。","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
+          16px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 507
+      height: 215
+      id: '1751190145218'
+      position:
+        x: -228.66493953613457
+        y: 1078.5280001962967
+      positionAbsolute:
+        x: -228.66493953613457
+        y: 1078.5280001962967
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 507
+    - data:
+        author: 2023200551@ruc.edu.cn
+        desc: ''
+        height: 255
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          16px;","text":"大语言模型：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;"},{"children":[],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textFormat":1,"textStyle":"font-size:
+          14px;"},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"解析后的文本，流转至不同大语言模型：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0},{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"借助多模型差异化能力，以多样化话术对文献内容深度询问，覆盖 “数据准确性校验”“浓度单位换算”“实验条件关联分析”
+          等多维度需求；","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
+          16px;","value":1},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"为保障流程稳定性，设置 “失败时重试 3 次” 机制 ，应对模型调用异常、文本理解偏差等问题，提升数据提取成功率。","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
+          16px;","value":2}],"direction":"ltr","format":"","indent":0,"type":"list","version":1,"textStyle":"font-size:
+          16px;","listType":"bullet","start":1,"tag":"ul"}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
+          16px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 509
+      height: 255
+      id: '1751190243870'
+      position:
+        x: -228.66493953613457
+        y: 1333.43248259741
+      positionAbsolute:
+        x: -228.66493953613457
+        y: 1333.43248259741
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 509
+    - data:
+        author: 2023200551@ruc.edu.cn
+        desc: ''
+        height: 250
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          16px;","text":"代码执行节点","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;"},{"children":[],"direction":null,"format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          14px;","textFormat":0},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"经模型交互输出的中间结果，交由进一步处理：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0},{"children":[],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""},{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"执行数据清洗（如剔除无效格式、修正识别错误）、逻辑校验（匹配实验逻辑，过滤矛盾数据 ）；","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
+          16px;","value":1},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"同样配置 “失败时重试 3 次”，确保数据处理质量，为最终输出夯实基础。","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
+          16px;","value":2}],"direction":"ltr","format":"","indent":0,"type":"list","version":1,"textStyle":"font-size:
+          16px;","listType":"bullet","start":1,"tag":"ul"}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
+          16px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 508
+      height: 250
+      id: '1751190357581'
+      position:
+        x: -228.66493953613457
+        y: 1631.553343661618
+      positionAbsolute:
+        x: -228.66493953613457
+        y: 1631.553343661618
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 508
+    - data:
+        author: 2023200551@ruc.edu.cn
+        desc: ''
+        height: 183
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          14px;","text":"迭代流程产出的结构化数据，可通过","type":"text","version":1},{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          14px;","text":"模板转换","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          14px;","text":"环节，将数据映射至标准化格式（如科研报表、数据库字段 ），便于后续统计分析、可视化呈现等应用。","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          14px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
+          14px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 240
+      height: 183
+      id: '1751190399703'
+      position:
+        x: 1518.6612375229165
+        y: 545.1117190211345
+      positionAbsolute:
+        x: 1518.6612375229165
+        y: 545.1117190211345
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 240
+    - data:
+        author: 2023200551@ruc.edu.cn
+        desc: ''
+        height: 295
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          14px;","text":"通过","type":"text","version":1},{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          14px;","text":"并行迭代 + 多模型协同 + 重试机制","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          14px;","text":"，攻克科学文献数据分散、理解难度高的痛点，高效获取精准抗生素浓度数据；既适配 “大规模文献批量分析” 场景，也支持
+          “单篇文献深度挖掘” 需求，可灵活拓展至 “多类型实验数据提取”“跨文献数据对比” 等衍生任务，为科研分析、数据治理提供强支撑。","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          14px;","textFormat":0},{"children":[],"direction":null,"format":"start","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          14px;","text":"简言之，本流程以自动化、智能化链路，打通 “文献输入→内容解析→模型交互→数据规整” 全环节，让抗生素浓度数据提取更高效、更精准，助力科研工作聚焦核心分析环节
+          。","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          14px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
+          14px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 347
+      height: 295
+      id: '1751190484270'
+      position:
+        x: 1805.3387624770835
+        y: 545.1117190211345
+      positionAbsolute:
+        x: 1805.3387624770835
+        y: 545.1117190211345
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 347
+    - data:
+        desc: ''
+        error_handle_mode: terminated
+        height: 454
+        is_parallel: true
+        iterator_selector:
+        - '1750466107735'
+        - object_file
+        output_selector:
+        - '1751374441285'
+        - ChatGPT_4o_mini
+        output_type: array[object]
+        parallel_nums: 10
+        selected: false
+        start_node_id: 1751373621053start
+        title: 迭代 3
+        type: iteration
+        width: 1116
+      height: 454
+      id: '1751373621053'
+      position:
+        x: 334
+        y: 1415
+      positionAbsolute:
+        x: 334
+        y: 1415
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 1116
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1751373621053start
+      parentId: '1751373621053'
+      position:
+        x: 60
+        y: 109.5
+      positionAbsolute:
+        x: 394
+        y: 1524.5
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        desc: ''
+        isInIteration: true
+        isInLoop: false
+        is_array_file: true
+        iteration_id: '1751373621053'
+        selected: false
+        title: 文档提取3
+        type: document-extractor
+        variable_selector:
+        - '1750466107735'
+        - object_file
+      height: 91
+      id: '1751373640405'
+      parentId: '1751373621053'
+      position:
+        x: 204
+        y: 88
+      positionAbsolute:
+        x: 538
+        y: 1503
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1751373640405'
+          - text
+        desc: 话术1
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751373621053'
+        model:
+          completion_params: {}
+          mode: chat
+          name: gpt-4o-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 2f081e41-44a8-4f18-a046-326e248766f4
+          role: system
+          text: '请从我提供的科学文献{{#1751373640405.text#}}
+
+            中提取所有抗生素及其浓度相关信息，以JSON数组格式输出。要求包含：
+
+            PaperID是{{#1751373621053.index#}}
+
+            ① Name:抗生素名称（如‘磺胺甲恶唑’，保留完整化学名）；
+
+            ② Value and Unit:浓度数值及单位（如‘12.5 ng/L’，环境领域常见单位：ng/L、μg/L、μg/kg（沉积物），注意标注“浓度范围”“平/均值”“中位数”“未检出”等情况）
+
+            ③ Water: 水体类型（如‘地表水’‘饮用水’‘污水处理厂出水’）
+
+            ④ Location & Date: 采样信息（采样地点/河流名称、采样时间，如‘长江南京段，2023年7月’）
+
+            ⑤ Context: 原文上下文（段落编号或句子片段，如‘摘要第3段’‘图 2 caption’）。'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              Context:
+                type: string
+              Date:
+                type: string
+              Location:
+                type: string
+              Name:
+                type: string
+              PaperID:
+                type: string
+              Unit:
+                type: string
+              Value:
+                type: number
+              Water:
+                type: string
+            required:
+            - PaperID
+            - Name
+            - Value
+            - Unit
+            - Water
+            - Location
+            - Date
+            - Context
+            type: object
+        structured_output_enabled: true
+        title: ChatGPT-4o-mini1
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 147
+      id: '1751373650354'
+      parentId: '1751373621053'
+      position:
+        x: 508
+        y: 60
+      positionAbsolute:
+        x: 842
+        y: 1475
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1751373640405'
+          - text
+        desc: 话术2
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751373621053'
+        model:
+          completion_params: {}
+          mode: chat
+          name: gpt-4o-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: c06f5b15-b700-4c40-9447-5ea53d03afdb
+          role: system
+          text: 'PaperID是{{#1751373621053.index#}}
+
+            阶段1：抗生素与水体类型识别：
+
+            请从文献{{#1751373640405.text#}}
+
+            中提取以下信息：①Name:抗生素名称（如‘氧氟沙星’，需区分异构体，如‘R-氧氟沙星’）；②对应的水体类型Water（如‘河水’‘海水’‘雨水’），若未明确标注‘水体’，需根据上下文推断（如‘湖泊沉积物’不属于水体）。”
+
+            阶段2：浓度与采样信息整合：
+
+            “针对上一步识别的抗生素-水体对，提取：①浓度数值Value（保留科学计数法，如‘3.2×10⁻³ μg/L’，注意标注“浓度范围”“平均值”“中位数”“未检出”等情况）；②采样地点Location（精确到流域/城市，如‘长江三角洲’）；③采样时间Date（精确到年月，如‘2023年5月’）；④若浓度低于检测限（LOD），标注‘<LOD’及数值（如‘<0.5
+            ng/L’）。”
+
+            阶段3：时空数据结构化：
+
+            “将前两步结果生成环境监测数据记录，以JSON数组格式输出要求：①包含‘抗生素Name-浓度Value-水体Water-地点Location-时间Date’五要素；②地点需关联流域（如‘太湖梅梁湾’属于‘太湖流域’）；③时间信息缺失时标注‘[时间未知]’。'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              Context:
+                type: string
+              Date:
+                type: string
+              Location:
+                type: string
+              Name:
+                type: string
+              PaperID:
+                type: string
+              Unit:
+                type: string
+              Value:
+                type: number
+              Water:
+                type: string
+            required:
+            - PaperID
+            - Name
+            - Value
+            - Unit
+            - Water
+            - Location
+            - Date
+            - Context
+            type: object
+        structured_output_enabled: true
+        title: ChatGPT-4o-mini2
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 147
+      id: '1751373851802'
+      parentId: '1751373621053'
+      position:
+        x: 508
+        y: 247
+      positionAbsolute:
+        x: 842
+        y: 1662
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: "def main(arg1: object, arg2: object) -> dict:\n    return {\n     \
+          \   \"ChatGPT_4o_mini\": {\n            \"话术一\": arg1,\n            \"话术二\"\
+          : arg2\n        }\n    }\n\n"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751373621053'
+        outputs:
+          ChatGPT_4o_mini:
+            children: null
+            type: object
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 代码执行 3
+        type: code
+        variables:
+        - value_selector:
+          - '1751373650354'
+          - structured_output
+          variable: arg1
+        - value_selector:
+          - '1751373851802'
+          - structured_output
+          variable: arg2
+      height: 83
+      id: '1751374441285'
+      parentId: '1751373621053'
+      position:
+        x: 812
+        y: 92
+      positionAbsolute:
+        x: 1146
+        y: 1507
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        desc: ''
+        error_handle_mode: terminated
+        height: 454
+        is_parallel: true
+        iterator_selector:
+        - '1750466107735'
+        - object_file
+        output_selector:
+        - '1751378358745'
+        - ChatGPT_41_mini
+        output_type: array[object]
+        parallel_nums: 10
+        selected: false
+        start_node_id: 1751376385930start
+        title: 迭代 4
+        type: iteration
+        width: 1116
+      height: 454
+      id: '1751376385930'
+      position:
+        x: 334
+        y: 1909
+      positionAbsolute:
+        x: 334
+        y: 1909
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 1116
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1751376385930start
+      parentId: '1751376385930'
+      position:
+        x: 60
+        y: 109.5
+      positionAbsolute:
+        x: 394
+        y: 2018.5
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        desc: ''
+        isInIteration: true
+        isInLoop: false
+        is_array_file: true
+        iteration_id: '1751376385930'
+        selected: false
+        title: 文档提取4
+        type: document-extractor
+        variable_selector:
+        - '1750466107735'
+        - object_file
+      height: 91
+      id: '1751378023089'
+      parentId: '1751376385930'
+      position:
+        x: 204
+        y: 88
+      positionAbsolute:
+        x: 538
+        y: 1997
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1751378023089'
+          - text
+        desc: 话术1
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751376385930'
+        model:
+          completion_params: {}
+          mode: chat
+          name: gpt-4.1-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: cd69cc4d-8c8b-4481-8421-e21ba1f3686d
+          role: system
+          text: '请从我提供的科学文献pdf{{#1751378023089.text#}}
+
+            中提取所有抗生素及其浓度相关信息，以JSON数组格式输出。要求包含：
+
+            PaperID是{{#1751376385930.index#}}
+
+            ① Name:抗生素名称（如‘磺胺甲恶唑’，保留完整化学名）；
+
+            ② Value and Unit:浓度数值及单位（如‘12.5 ng/L’，环境领域常见单位：ng/L、μg/L、μg/kg（沉积物），注意标注“浓度范围”“平均值”“中位数”“未检出”等情况）
+
+            ③ Water: 水体类型（如‘地表水’‘饮用水’‘污水处理厂出水’）
+
+            ④ Location & Date: 采样信息（采样地点/河流名称、采样时间，如‘长江南京段，2023年7月’）
+
+            ⑤ Context: 原文上下文（段落编号或句子片段，如‘摘要第3段’‘图 2 caption’）。'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              Context:
+                type: string
+              Date:
+                type: string
+              Location:
+                type: string
+              Name:
+                type: string
+              PaperID:
+                type: string
+              Unit:
+                type: string
+              Value:
+                type: number
+              Water:
+                type: string
+            required:
+            - PaperID
+            - Name
+            - Value
+            - Unit
+            - Water
+            - Location
+            - Date
+            - Context
+            type: object
+        structured_output_enabled: true
+        title: ChatGPT-4.1-mini1
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 147
+      id: '1751378035165'
+      parentId: '1751376385930'
+      position:
+        x: 508
+        y: 60
+      positionAbsolute:
+        x: 842
+        y: 1969
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1751378023089'
+          - text
+        desc: 话术2
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751376385930'
+        model:
+          completion_params: {}
+          mode: chat
+          name: gpt-4.1-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: dd367ad0-f361-4ea0-921d-57d6720f31cd
+          role: system
+          text: 'PaperID是{{#1751376385930.index#}}
+
+            阶段1：抗生素与水体类型识别：
+
+            请从文献{{#1751378023089.text#}}
+
+            中提取以下信息：①Name:抗生素名称（如‘氧氟沙星’，需区分异构体，如‘R-氧氟沙星’）；②对应的水体类型Water（如‘河水’‘海水’‘雨水’），若未明确标注‘水体’，需根据上下文推断（如‘湖泊沉积物’不属于水体）。”
+
+            阶段2：浓度与采样信息整合：
+
+            “针对上一步识别的抗生素-水体对，提取：①浓度数值Value（保留科学计数法，如‘3.2×10⁻³ μg/L’，注意标注“浓度范围”“平均值”“中位数”“未检出”等情况）；②采样地点Location（精确到流域/城市，如‘长江三角洲’）；③采样时间Date（精确到年月，如‘2023年5月’）；④若浓度低于检测限（LOD），标注‘<LOD’及数值（如‘<0.5
+            ng/L’）。”
+
+            阶段3：时空数据结构化：
+
+            “将前两步结果生成环境监测数据记录，以JSON数组格式输出要求：①包含‘抗生素Name-浓度Value-水体Water-地点Location-时间Date’五要素；②地点需关联流域（如‘太湖梅梁湾’属于‘太湖流域’）；③时间信息缺失时标注‘[时间未知]’。'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              Context:
+                type: string
+              Date:
+                type: string
+              Location:
+                type: string
+              Name:
+                type: string
+              PaperID:
+                type: string
+              Unit:
+                type: string
+              Value:
+                type: number
+              Water:
+                type: string
+            required:
+            - PaperID
+            - Name
+            - Value
+            - Unit
+            - Water
+            - Location
+            - Date
+            - Context
+            type: object
+        structured_output_enabled: true
+        title: ChatGPT-4.1-mini2
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 147
+      id: '1751378038707'
+      parentId: '1751376385930'
+      position:
+        x: 508
+        y: 247
+      positionAbsolute:
+        x: 842
+        y: 2156
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: "def main(arg1: object, arg2: object) -> dict:\n    return {\n     \
+          \   \"ChatGPT_41_mini\": {\n            \"话术一\": arg1,\n            \"话术二\"\
+          : arg2\n        }\n    }"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1751376385930'
+        outputs:
+          ChatGPT_41_mini:
+            children: null
+            type: object
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 代码执行 4
+        type: code
+        variables:
+        - value_selector:
+          - '1751378035165'
+          - structured_output
+          variable: arg1
+        - value_selector:
+          - '1751378038707'
+          - structured_output
+          variable: arg2
+      height: 83
+      id: '1751378358745'
+      parentId: '1751376385930'
+      position:
+        x: 812
+        y: 92
+      positionAbsolute:
+        x: 1146
+        y: 2001
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    viewport:
+      x: 282.8282796351185
+      y: -109.35293742040551
+      zoom: 0.36703765900852714

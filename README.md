@@ -1,0 +1,1 @@
+* `Dify_AI.yml`文件为包含本项目服务的yaml源文件，基于Docker搭建本地Dify的详细教程可参考以下网址：https://blog.csdn.net/zhishi0000/article/details/147992745
