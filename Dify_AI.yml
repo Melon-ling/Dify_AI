@@ -9,11 +9,11 @@ dependencies:
 - current_identifier: null
   type: marketplace
   value:
-    marketplace_plugin_unique_identifier: langgenius/deepseek:0.0.6@dd589dc093c8084925858034ab5ec1fdf0d33819f43226c2f8c4a749a9acbbb2
+    marketplace_plugin_unique_identifier: langgenius/openai:0.1.0@539dc0dde8ecaa84e61b8eeb154c3bb7fbc9caa80afd83763dd5860a725d2742
 - current_identifier: null
   type: marketplace
   value:
-    marketplace_plugin_unique_identifier: langgenius/openai:0.0.29@9e17ae8073fe53c282e9dc411e76a3cc52f8e794e4cc2499d204502086871c53
+    marketplace_plugin_unique_identifier: langgenius/deepseek:0.0.6@dd589dc093c8084925858034ab5ec1fdf0d33819f43226c2f8c4a749a9acbbb2
 kind: app
 version: 0.3.0
 workflow:
@@ -779,34 +779,6 @@ workflow:
       type: custom
       width: 244
     - data:
-        author: 2023200551@ruc.edu.cn
-        desc: ''
-        height: 261
-        selected: false
-        showAuthor: true
-        text: '{"root":{"children":[{"children":[],"direction":null,"format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          16px;","textFormat":0},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"本工作流程围绕科学文献中抗生素浓度数据获取展开，通过调用多种大语言模型，以多样化话术对文献进行询问，经文档抽取、代码执行、模板转换等环节，最终实现数据提取。","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          16px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
-          16px;"}}'
-        theme: pink
-        title: ''
-        type: ''
-        width: 249
-      height: 261
-      id: '1750466705947'
-      position:
-        x: -228.66493953613457
-        y: 427
-      positionAbsolute:
-        x: -228.66493953613457
-        y: 427
-      selected: false
-      sourcePosition: right
-      targetPosition: left
-      type: custom-note
-      width: 249
-    - data:
         context:
           enabled: true
           variable_selector:
@@ -1201,239 +1173,6 @@ workflow:
       type: custom
       width: 244
       zIndex: 1002
-    - data:
-        author: 2023200551@ruc.edu.cn
-        desc: ''
-        height: 135
-        selected: false
-        showAuthor: true
-        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"工作流程将由此开始。系统会提示用户上传含有抗生素浓度的科学文献。","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          16px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
-          16px;"}}'
-        theme: blue
-        title: ''
-        type: ''
-        width: 249
-      height: 135
-      id: '1751188147944'
-      position:
-        x: 30
-        y: 555.0608683159473
-      positionAbsolute:
-        x: 30
-        y: 555.0608683159473
-      selected: false
-      sourcePosition: right
-      targetPosition: left
-      type: custom-note
-      width: 249
-    - data:
-        author: 2023200551@ruc.edu.cn
-        desc: ''
-        height: 335
-        selected: false
-        showAuthor: true
-        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"本流程以包含抗生素浓度信息挖掘需求的文件（","type":"text","version":1},{"detail":0,"format":16,"mode":"normal","style":"font-size:
-          16px;","text":"object_file","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"）作为输入，通过双并行迭代模式提升数据处理效率。具体而言：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          16px;","textFormat":0},{"children":[],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          16px;","textFormat":0},{"children":[{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
-          16px;","text":"并行执行","type":"text","version":1},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"：同步触发四个独立迭代流程（迭代1、迭代2、迭代3、迭代4）分别采用不同的大语言模型（deepseek_chat,deepseek-coder,ChatGPT-4o-mini,ChatGPT-4.1-mini）进行数据提取；","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"link","version":1,"textStyle":"font-size:
-          16px;","rel":"noreferrer","target":null,"title":null,"url":""}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
-          16px;","value":1},{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
-          16px;","text":"差异化分析","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"：通过模型多样性覆盖不同文献分析场景（如结构化数据解析、非结构化文本挖掘等）；","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textFormat":1,"textStyle":"font-size:
-          16px;","value":2},{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
-          16px;","text":"效率优化","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"：并行架构显著提升数据提取吞吐量，确保快速完成大规模文献处理","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textFormat":1,"textStyle":"font-size:
-          16px;","value":3}],"direction":"ltr","format":"","indent":0,"type":"list","version":1,"textFormat":1,"textStyle":"font-size:
-          16px;","listType":"bullet","start":1,"tag":"ul"}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textFormat":1,"textStyle":"font-size:
-          16px;"}}'
-        theme: blue
-        title: ''
-        type: ''
-        width: 506
-      height: 335
-      id: '1751188379669'
-      position:
-        x: -228.66493953613457
-        y: 710.0253035385781
-      positionAbsolute:
-        x: -228.66493953613457
-        y: 710.0253035385781
-      selected: false
-      sourcePosition: right
-      targetPosition: left
-      type: custom-note
-      width: 506
-    - data:
-        author: 2023200551@ruc.edu.cn
-        desc: ''
-        height: 215
-        selected: false
-        showAuthor: true
-        text: '{"root":{"children":[{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
-          16px;","text":"文档提取节点","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"：","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":1,"textStyle":"font-size:
-          16px;"},{"children":[],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          16px;","textFormat":0},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"在每轮迭代中，由此对输入文件开展解析，精准定位、抽取与抗生素浓度相关文本内容，为后续模型分析提供基础素材。迭代1、迭代2、迭代3、迭代4分别代表不同的大语言模型，其内部的两种LLM分别代表同一种大语言模型的两种询问话术。","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          16px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
-          16px;"}}'
-        theme: blue
-        title: ''
-        type: ''
-        width: 507
-      height: 215
-      id: '1751190145218'
-      position:
-        x: -228.66493953613457
-        y: 1078.5280001962967
-      positionAbsolute:
-        x: -228.66493953613457
-        y: 1078.5280001962967
-      selected: false
-      sourcePosition: right
-      targetPosition: left
-      type: custom-note
-      width: 507
-    - data:
-        author: 2023200551@ruc.edu.cn
-        desc: ''
-        height: 255
-        selected: false
-        showAuthor: true
-        text: '{"root":{"children":[{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
-          16px;","text":"大语言模型：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textFormat":1,"textStyle":"font-size:
-          16px;"},{"children":[],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textFormat":1,"textStyle":"font-size:
-          14px;"},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"解析后的文本，流转至不同大语言模型：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          16px;","textFormat":0},{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"借助多模型差异化能力，以多样化话术对文献内容深度询问，覆盖 “数据准确性校验”“浓度单位换算”“实验条件关联分析”
-          等多维度需求；","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
-          16px;","value":1},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"为保障流程稳定性，设置 “失败时重试 3 次” 机制 ，应对模型调用异常、文本理解偏差等问题，提升数据提取成功率。","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
-          16px;","value":2}],"direction":"ltr","format":"","indent":0,"type":"list","version":1,"textStyle":"font-size:
-          16px;","listType":"bullet","start":1,"tag":"ul"}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
-          16px;"}}'
-        theme: blue
-        title: ''
-        type: ''
-        width: 509
-      height: 255
-      id: '1751190243870'
-      position:
-        x: -228.66493953613457
-        y: 1333.43248259741
-      positionAbsolute:
-        x: -228.66493953613457
-        y: 1333.43248259741
-      selected: false
-      sourcePosition: right
-      targetPosition: left
-      type: custom-note
-      width: 509
-    - data:
-        author: 2023200551@ruc.edu.cn
-        desc: ''
-        height: 250
-        selected: false
-        showAuthor: true
-        text: '{"root":{"children":[{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
-          16px;","text":"代码执行节点","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textFormat":1,"textStyle":"font-size:
-          16px;"},{"children":[],"direction":null,"format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          14px;","textFormat":0},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"经模型交互输出的中间结果，交由进一步处理：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          16px;","textFormat":0},{"children":[],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""},{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"执行数据清洗（如剔除无效格式、修正识别错误）、逻辑校验（匹配实验逻辑，过滤矛盾数据 ）；","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
-          16px;","value":1},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          16px;","text":"同样配置 “失败时重试 3 次”，确保数据处理质量，为最终输出夯实基础。","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
-          16px;","value":2}],"direction":"ltr","format":"","indent":0,"type":"list","version":1,"textStyle":"font-size:
-          16px;","listType":"bullet","start":1,"tag":"ul"}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
-          16px;"}}'
-        theme: blue
-        title: ''
-        type: ''
-        width: 508
-      height: 250
-      id: '1751190357581'
-      position:
-        x: -228.66493953613457
-        y: 1631.553343661618
-      positionAbsolute:
-        x: -228.66493953613457
-        y: 1631.553343661618
-      selected: false
-      sourcePosition: right
-      targetPosition: left
-      type: custom-note
-      width: 508
-    - data:
-        author: 2023200551@ruc.edu.cn
-        desc: ''
-        height: 183
-        selected: false
-        showAuthor: true
-        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          14px;","text":"迭代流程产出的结构化数据，可通过","type":"text","version":1},{"detail":0,"format":1,"mode":"normal","style":"font-size:
-          14px;","text":"模板转换","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          14px;","text":"环节，将数据映射至标准化格式（如科研报表、数据库字段 ），便于后续统计分析、可视化呈现等应用。","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          14px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
-          14px;"}}'
-        theme: blue
-        title: ''
-        type: ''
-        width: 240
-      height: 183
-      id: '1751190399703'
-      position:
-        x: 1518.6612375229165
-        y: 545.1117190211345
-      positionAbsolute:
-        x: 1518.6612375229165
-        y: 545.1117190211345
-      selected: false
-      sourcePosition: right
-      targetPosition: left
-      type: custom-note
-      width: 240
-    - data:
-        author: 2023200551@ruc.edu.cn
-        desc: ''
-        height: 295
-        selected: false
-        showAuthor: true
-        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          14px;","text":"通过","type":"text","version":1},{"detail":0,"format":1,"mode":"normal","style":"font-size:
-          14px;","text":"并行迭代 + 多模型协同 + 重试机制","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          14px;","text":"，攻克科学文献数据分散、理解难度高的痛点，高效获取精准抗生素浓度数据；既适配 “大规模文献批量分析” 场景，也支持
-          “单篇文献深度挖掘” 需求，可灵活拓展至 “多类型实验数据提取”“跨文献数据对比” 等衍生任务，为科研分析、数据治理提供强支撑。","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          14px;","textFormat":0},{"children":[],"direction":null,"format":"start","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
-          14px;","text":"简言之，本流程以自动化、智能化链路，打通 “文献输入→内容解析→模型交互→数据规整” 全环节，让抗生素浓度数据提取更高效、更精准，助力科研工作聚焦核心分析环节
-          。","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
-          14px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
-          14px;"}}'
-        theme: blue
-        title: ''
-        type: ''
-        width: 347
-      height: 295
-      id: '1751190484270'
-      position:
-        x: 1805.3387624770835
-        y: 545.1117190211345
-      positionAbsolute:
-        x: 1805.3387624770835
-        y: 545.1117190211345
-      selected: false
-      sourcePosition: right
-      targetPosition: left
-      type: custom-note
-      width: 347
     - data:
         desc: ''
         error_handle_mode: terminated
@@ -2042,7 +1781,266 @@ workflow:
       type: custom
       width: 244
       zIndex: 1002
+    - data:
+        author: user
+        desc: ''
+        height: 260
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[],"direction":null,"format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"本工作流程围绕科学文献中抗生素浓度数据获取展开，通过调用多种大语言模型，以多样化话术对文献进行询问，经文档抽取、代码执行、模板转换等环节，最终实现数据提取。","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
+          16px;"}}'
+        theme: pink
+        title: ''
+        type: ''
+        width: 249
+      height: 260
+      id: '1753182127826'
+      position:
+        x: -236.30923651380604
+        y: 427
+      positionAbsolute:
+        x: -236.30923651380604
+        y: 427
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 249
+    - data:
+        author: user
+        desc: ''
+        height: 129
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"工作流程将由此开始。系统会提示用户上传含有抗生素浓度的科学文献。","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
+          16px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 240
+      height: 129
+      id: '1753182276524'
+      position:
+        x: 30
+        y: 558.1123945553131
+      positionAbsolute:
+        x: 30
+        y: 558.1123945553131
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 240
+    - data:
+        author: user
+        desc: ''
+        height: 335
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"本流程以包含抗生素浓度信息挖掘需求的文件（","type":"text","version":1},{"detail":0,"format":16,"mode":"normal","style":"font-size:
+          16px;","text":"object_file","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"）作为输入，通过双并行迭代模式提升数据处理效率。具体而言：","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0},{"children":[],"direction":null,"format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0},{"children":[{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          16px;","text":"并行执行","type":"text","version":1},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"：同步触发四个独立迭代流程（迭代1、迭代2、迭代3、迭代4）分别采用不同的大语言模型（deepseek_chat,deepseek-coder,ChatGPT-4o-mini,ChatGPT-4.1-mini）进行数据提取；","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"link","version":1,"textStyle":"font-size:
+          16px;","rel":"noreferrer","target":null,"title":null,"url":""}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;","value":1},{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          16px;","text":"差异化分析","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"：通过模型多样性覆盖不同文献分析场景（如结构化数据解析、非结构化文本挖掘等）；","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;","value":2},{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          16px;","text":"效率优化","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"：并行架构显著提升数据提取吞吐量，确保快速完成大规模文献处理","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;","value":3}],"direction":"ltr","format":"","indent":0,"type":"list","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;","listType":"bullet","start":1,"tag":"ul"}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 505
+      height: 335
+      id: '1753182324388'
+      position:
+        x: -236.30923651380604
+        y: 706.2131430558675
+      positionAbsolute:
+        x: -236.30923651380604
+        y: 706.2131430558675
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 505
+    - data:
+        author: user
+        desc: ''
+        height: 233
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          16px;","text":"文档提取节点","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"：","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;"},{"children":[],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"在每轮迭代中，由此对输入文件开展解析，精准定位、抽取与抗生素浓度相关文本内容，为后续模型分析提供基础素材。迭代1、迭代2、迭代3、迭代4分别代表不同的大语言模型，其内部的两种LLM分别代表同一种大语言模型的两种询问话术。","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 506
+      height: 233
+      id: '1753182396900'
+      position:
+        x: -236.30923651380604
+        y: 1071.4799907166887
+      positionAbsolute:
+        x: -236.30923651380604
+        y: 1071.4799907166887
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 506
+    - data:
+        author: user
+        desc: ''
+        height: 255
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          16px;","text":"大语言模型：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;"},{"children":[],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textFormat":1,"textStyle":"font-size:
+          14px;"},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"解析后的文本，流转至不同大语言模型：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0},{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"借助多模型差异化能力，以多样化话术对文献内容深度询问，覆盖 “数据准确性校验”“浓度单位换算”“实验条件关联分析”
+          等多维度需求；","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
+          16px;","value":1},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"为保障流程稳定性，设置 “失败时重试 3 次” 机制 ，应对模型调用异常、文本理解偏差等问题，提升数据提取成功率。","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
+          16px;","value":2}],"direction":"ltr","format":"","indent":0,"type":"list","version":1,"textStyle":"font-size:
+          16px;","listType":"bullet","start":1,"tag":"ul"}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 508
+      height: 255
+      id: '1753182434877'
+      position:
+        x: -236.30923651380604
+        y: 1330.0790319880284
+      positionAbsolute:
+        x: -236.30923651380604
+        y: 1330.0790319880284
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 508
+    - data:
+        author: user
+        desc: ''
+        height: 256
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          16px;","text":"代码执行节点","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;"},{"children":[],"direction":null,"format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          14px;","textFormat":0},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"经模型交互输出的中间结果，交由进一步处理：","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          16px;","textFormat":0},{"children":[],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""},{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"执行数据清洗（如剔除无效格式、修正识别错误）、逻辑校验（匹配实验逻辑，过滤矛盾数据 ）；","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
+          16px;","value":1},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          16px;","text":"同样配置 “失败时重试 3 次”，确保数据处理质量，为最终输出夯实基础。","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"listitem","version":1,"textStyle":"font-size:
+          16px;","value":2}],"direction":"ltr","format":"","indent":0,"type":"list","version":1,"textStyle":"font-size:
+          16px;","listType":"bullet","start":1,"tag":"ul"}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textFormat":1,"textStyle":"font-size:
+          16px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 507
+      height: 256
+      id: '1753182505676'
+      position:
+        x: -236.30923651380604
+        y: 1619.8759503936867
+      positionAbsolute:
+        x: -236.30923651380604
+        y: 1619.8759503936867
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 507
+    - data:
+        author: user
+        desc: ''
+        height: 169
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          14px;","text":"迭代流程产出的结构化数据，可通过","type":"text","version":1},{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          14px;","text":"模板转换","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          14px;","text":"环节，将数据映射至标准化格式（如科研报表、数据库字段 ），便于后续统计分析、可视化呈现等应用。","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
+          14px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 245
+      height: 169
+      id: '1753182543484'
+      position:
+        x: 1524.3306206868185
+        y: 545.1117190211345
+      positionAbsolute:
+        x: 1524.3306206868185
+        y: 545.1117190211345
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 245
+    - data:
+        author: user
+        desc: ''
+        height: 292
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          14px;","text":"通过","type":"text","version":1},{"detail":0,"format":1,"mode":"normal","style":"font-size:
+          14px;","text":"并行迭代 + 多模型协同 + 重试机制","type":"text","version":1},{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          14px;","text":"，攻克科学文献数据分散、理解难度高的痛点，高效获取精准抗生素浓度数据；既适配 “大规模文献批量分析” 场景，也支持
+          “单篇文献深度挖掘” 需求，可灵活拓展至 “多类型实验数据提取”“跨文献数据对比” 等衍生任务，为科研分析、数据治理提供强支撑。","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          14px;","textFormat":0},{"children":[],"direction":null,"format":"start","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""},{"children":[{"detail":0,"format":0,"mode":"normal","style":"font-size:
+          14px;","text":"简言之，本流程以自动化、智能化链路，打通 “文献输入→内容解析→模型交互→数据规整” 全环节，让抗生素浓度数据提取更高效、更精准，助力科研工作聚焦核心分析环节
+          。","type":"text","version":1}],"direction":"ltr","format":"start","indent":0,"type":"paragraph","version":1,"textStyle":"font-size:
+          14px;","textFormat":0}],"direction":"ltr","format":"","indent":0,"type":"root","version":1,"textStyle":"font-size:
+          14px;"}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 349
+      height: 292
+      id: '1753182565421'
+      position:
+        x: 1805.3387624770835
+        y: 545.1117190211345
+      positionAbsolute:
+        x: 1805.3387624770835
+        y: 545.1117190211345
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 349
     viewport:
-      x: 282.8282796351185
-      y: -109.35293742040551
-      zoom: 0.36703765900852714
+      x: 318.0973915049858
+      y: 23.561257152410008
+      zoom: 0.2720843778535487
